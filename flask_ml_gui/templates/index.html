@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Fraud Prediction with Machine Learning</title>
+    </head>
+    <body>
+        <h1>Fraud Prediction with Machine Learning</h1>
+        <form method="POST" action="/predict">
+            <label for="input">Enter data to classify:</label>
+            <input type="text" name="input" id="input" required />
+            <br />
+            <button type="submit">Predict</button>
+        </form>
+
+
+        <h2>List of Features in Order:</h2>
+            <ol>
+                <li>WeekOfMonth</li>
+                <li>WeekOfMonthClaimed</li>
+                <li>Age</li>
+                <li>PolicyNumber</li>
+                <li>RepNumber</li>
+                <li>Deductible</li>
+                <li>DriverRating</li>
+                <li>Year</li>
+                <li>Month_Aug</li>
+                <li>Month_Dec</li>
+                <li>Month_Feb</li>
+                <li>Month_Jan</li>
+                <li>Month_Jul</li>
+                <li>Month_Jun</li>
+                <li>Month_Mar</li>
+                <li>Month_May</li>
+                <li>Month_Nov</li>
+                <li>Month_Oct</li>
+                <li>Month_Sep</li>
+                <li>DayOfWeek_Monday</li>
+                <li>DayOfWeek_Saturday</li>
+                <li>DayOfWeek_Sunday</li>
+                <li>DayOfWeek_Thursday</li>
+                <li>DayOfWeek_Tuesday</li>
+                <li>DayOfWeek_Wednesday</li>
+                <li>Make_BMW</li>
+                <li>Make_Chevrolet</li>
+                <li>Make_Dodge</li>
+                <li>Make_Ferrari</li>
+                <li>Make_Ford</li>
+                <li>Make_Honda</li>
+                <li>Make_Jaguar</li>
+                <li>Make_Lexus</li>
+                <li>Make_Mazda</li>
+                <li>Make_Mecedes</li>
+                <li>Make_Mercury</li>
+                <li>Make_Nisson</li>
+                <li>Make_Pontiac</li>
+                <li>Make_Porche</li>
+                <li>Make_Saab</li>
+                <li>Make_Saturn</li>
+                <li>Make_Toyota</li>
+                <li>Make_VW</li>
+                <li>AccidentArea_Urban</li>
+                <li>DayOfWeekClaimed_Friday</li>
+                <li>DayOfWeekClaimed_Monday</li>
+                <li>DayOfWeekClaimed_Saturday</li>
+                <li>DayOfWeekClaimed_Sunday</li>
+                <li>DayOfWeekClaimed_Thursday</li>
+                <li>DayOfWeekClaimed_Tuesday</li>
+                <li>DayOfWeekClaimed_Wednesday</li>
+                <li>MonthClaimed_Apr</li>
+                <li>MonthClaimed_Aug</li>
+                <li>MonthClaimed_Dec</li>
+                <li>MonthClaimed_Feb</li>
+                <li>MonthClaimed_Jan</li>
+                <li>MonthClaimed_Jul</li>
+                <li>MonthClaimed_Jun</li>
+                <li>MonthClaimed_Mar</li>
+                <li>MonthClaimed_May</li>
+                <li>MonthClaimed_Nov</li>
+                <li>MonthClaimed_Oct</li>
+                <li>MonthClaimed_Sep</li>
+                <li>Sex_Male</li>
+                <li>MaritalStatus_Married</li>
+                <li>MaritalStatus_Single</li>
+                <li>MaritalStatus_Widow</li>
+                <li>Fault_Third Party</li>
+                <li>PolicyType_Sedan - Collision</li>
+                <li>PolicyType_Sedan - Liability</li>
+                <li>PolicyType_Sport - All Perils</li>
+                <li>PolicyType_Sport - Collision</li>
+                <li>PolicyType_Sport - Liability</li>
+                <li>PolicyType_Utility - All Perils</li>
+                <li>PolicyType_Utility - Collision</li>
+                <li>PolicyType_Utility - Liability</li>
+                <li>VehicleCategory_Sport</li>
+                <li>VehicleCategory_Utility</li>
+                <li>VehiclePrice_30000 to 39000</li>
+                <li>VehiclePrice_40000 to 59000</li>
+                <li>VehiclePrice_60000 to 69000</li>
+                <li>VehiclePrice_less than 20000</li>
+                <li>VehiclePrice_more than 69000</li>
+                <li>Days_Policy_Accident_15 to 30</li>
+                <li>Days_Policy_Accident_8 to 15</li>
+                <li>Days_Policy_Accident_more than 30</li>
+                <li>Days_Policy_Accident_none</li>
+                <li>Days_Policy_Claim_8 to 15</li>
+                <li>Days_Policy_Claim_more than 30</li>
+                <li>Days_Policy_Claim_none</li>
+                <li>PastNumberOfClaims_2 to 4</li>
+                <li>PastNumberOfClaims_more than 4</li>
+                <li>PastNumberOfClaims_none</li>
+                <li>AgeOfVehicle_3 years</li>
+                <li>AgeOfVehicle_4 years</li>
+                <li>AgeOfVehicle_5 years</li>
+                <li>AgeOfVehicle_6 years</li>
+                <li>AgeOfVehicle_7 years</li>
+                <li>AgeOfVehicle_more than 7</li>
+                <li>AgeOfVehicle_new</li>
+                <li>AgeOfPolicyHolder_18 to 20</li>
+                <li>AgeOfPolicyHolder_21 to 25</li>
+                <li>AgeOfPolicyHolder_26 to 30</li>
+                <li>AgeOfPolicyHolder_31 to 35</li>
+                <li>AgeOfPolicyHolder_36 to 40</li>
+                <li>AgeOfPolicyHolder_41 to 50</li>
+                <li>AgeOfPolicyHolder_51 to 65</li>
+                <li>AgeOfPolicyHolder_over 65</li>
+                <li>PoliceReportFiled_Yes</li>
+                <li>WitnessPresent_Yes</li>
+                <li>AgentType_Internal</li>
+                <li>NumberOfSuppliments_3 to 5</li>
+                <li>NumberofSupplimetns_more than 5</li>
+                <li>NumberOfSuppliments_none</li>
+                <li>AddressChange_Claim_2 to 3 years</li>
+                <li>AddressChange_Claim4 to 8 years</li>
+                <li>AddressChange_Claim_no change</li>
+                <li>AddressChange_Claim_under 6 months</li>
+                <li>NumberOfCars_2 vehicles</li>
+                <li>NumberOfCars_3 to 4</li>
+                <li>NumberOfCars_5 to 8</li>
+                <li>NumberOfCars_more than 8</li>
+                <li>BasePolicy_Collision</li>
+                <li>BasePolicy_Liability</li>
+    </body>
+</html>
